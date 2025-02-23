@@ -1,0 +1,5 @@
+<form action="/settings" method="post">
+    <label>API URL:</label>
+    <input type="text" name="apiUrl" th:value="${settings.apiUrl}" required>
+    <button type="submit">Save</button>
+</form>

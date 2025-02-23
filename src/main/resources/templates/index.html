@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitoring Dashboard</title>
+
+    <!-- Google Charts -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Pass API URL to JavaScript -->
+    <script th:inline="javascript">
+        var apiUrl = /*[[${apiUrl}]]*/ 'default-url';
+    </script>
+
+    <script src="/js/scripts.js"></script>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>System Monitoring Dashboard</h1>
+
+<div class="chart-container">
+    <div class="chart-box"><div id="cpu-chart"></div></div>
+    <div class="chart-box"><div id="memory-chart"></div></div>
+    <div class="chart-box"><div id="disk-chart"></div></div>
+</div>
+
+<h2>Performance Trends</h2>
+<div class="chart-container">
+    <div class="chart-box"><div id="cpu-line-chart"></div></div>
+    <div class="chart-box"><div id="memory-line-chart"></div></div>
+</div>
+</body>
+</html>
